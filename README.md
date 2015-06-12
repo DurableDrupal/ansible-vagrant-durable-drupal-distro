@@ -1,4 +1,4 @@
-# Installs DurableDrupalDistro Distro 
+# Installs DurableDrupalDistro Distro
 
 Ansible playbook for setting up [Durable Drupal Distro](https://github.com/DurableDrupal/durable-drupal-distro) on local workstation using Vagrant and VirtualBox based on the drupallean profile.
 
@@ -9,6 +9,12 @@ Use [Jeff Geerling's Ansible for DevOps Drupal Quick Start Guide](https://github
 * Install VirtualBox and Vagrant (make sure Vagrant is version 1.6.5 or later)
 * Install Ansible
 * Clone this project to a folder where you keep your VMs
+* If you have not previously added the ubuntu/trusty64 box, do so (I'm using vagrant 1.7.2) with:
+
+````
+$ vagrant box add ubuntu/trusty64
+````
+
 * On the cammand-line in that folder, type `vagrant up`
 * The process will take a while, on my 4GB RAM MacBook Pro it took about 5 minutes. A large part of that is the provisioning of the LAMP stack together with the checking out and installation of drush and DurableDrupalDistro.
 * Associate http://durabledrupalwebsite.dev/ with the private local machine ip set up by the Vagrantfile (192.168.34.11).
